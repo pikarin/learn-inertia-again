@@ -1,32 +1,24 @@
 <script setup>
-import { Link } from '@inertiajs/inertia-vue3'
+import AppNavLink from './AppNavLink.vue';
 </script>
 
 <template>
   <nav class="mt-6">
     <ul class="list-disc">
       <li>
-        <Link href="/" class="text-blue-500 hover:underline">
+        <AppNavLink href="/" :active="$page.component === 'Home'">
           Home
-        </Link>
+        </AppNavLink>
       </li>
       <li>
-        <Link href="/users" class="text-blue-500 hover:underline">
+        <AppNavLink href="/users" :active="$page.component === 'Users'">
           Users
-        </Link>
+        </AppNavLink>
       </li>
       <li>
-        <Link href="/settings" class="text-blue-500 hover:underline">
+        <AppNavLink href="/settings" :active="$page.component === 'Settings'">
           Settings
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="/logout" method="post"
-          as="button" class="text-blue-500 hover:underline"
-        >
-          Log Out
-        </Link>
+        </AppNavLink>
       </li>
     </ul>
   </nav>
