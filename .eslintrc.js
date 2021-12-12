@@ -17,6 +17,7 @@ module.exports = {
 
     'vue/order-in-components': ['error'],
     'vue/require-default-prop': ['error'],
+    'vue/no-v-html': 'off',
     'vue/max-attributes-per-line': [
       'error',
       {
