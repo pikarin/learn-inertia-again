@@ -1,6 +1,5 @@
 <script setup>
 import { Link } from '@inertiajs/inertia-vue3'
-import AppLayout from '../Shared/AppLayout.vue'
 
 const props = defineProps({
   time: {
@@ -8,11 +7,6 @@ const props = defineProps({
     default: '',
   },
 })
-</script>
-<script>
-export default {
-  layout: AppLayout,
-}
 </script>
 
 <template>
