@@ -8,6 +8,13 @@ const username = computed(() => usePage().props.value.auth.user.username);
 </script>
 
 <template>
+<Head>
+  <meta
+    head-key="description" name="description"
+    content="My App description"
+  >
+</Head>
+
 <section class="p-6 bg-gray-200">
   <header class="flex justify-between">
     <div class="flex items-center">
