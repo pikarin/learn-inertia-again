@@ -10,10 +10,10 @@ const props = defineProps({
 </script>
 
 <template>
-  <Link
-    class="text-blue-500 hover:underline"
-    :class="{ 'font-bold underline': props.active }"
-  >
-    <slot />
-  </Link>
+<Link
+  class="text-blue-500 hover:underline"
+  :class="{ 'font-bold underline': props.active }"
+>
+  <slot />
+</Link>
 </template>

@@ -1,6 +1,6 @@
 <script setup>
 import { Link } from '@inertiajs/inertia-vue3'
-import AppNav from '../Shared/AppNav'
+import AppLayout from '../Shared/AppLayout.vue'
 
 const props = defineProps({
   time: {
@@ -11,11 +11,10 @@ const props = defineProps({
 </script>
 
 <template>
+<AppLayout>
   <h1 class="text-4xl font-bold">
     Users
   </h1>
-
-  <AppNav />
 
   <div class="mt-[800px]">
     <p>The current time is {{ props.time }}</p>
@@ -27,4 +26,5 @@ const props = defineProps({
       Refresh
     </Link>
   </div>
+</AppLayout>
 </template>

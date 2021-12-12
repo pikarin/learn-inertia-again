@@ -1,11 +1,11 @@
 <script setup>
-import AppNav from '../Shared/AppNav'
+import AppLayout from '../Shared/AppLayout.vue'
 </script>
 
 <template>
+<AppLayout>
   <h1 class="text-4xl font-bold">
     Settings
   </h1>
-
-  <AppNav />
+</AppLayout>
 </template>

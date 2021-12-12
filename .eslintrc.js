@@ -17,10 +17,18 @@ module.exports = {
 
     'vue/order-in-components': ['error'],
     'vue/require-default-prop': ['error'],
-    'vue/max-attributes-per-line': ['error',
+    'vue/max-attributes-per-line': [
+      'error',
       {
         singleline: 2,
-        multiline: 2
+        multiline: 2,
+      },
+    ],
+    'vue/html-indent': [
+      'error',
+      2,
+      {
+        baseIndent: 0,
       },
     ],
   },
