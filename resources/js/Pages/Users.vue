@@ -9,22 +9,25 @@ const props = defineProps({
   },
 })
 </script>
+<script>
+export default {
+  layout: AppLayout,
+}
+</script>
 
 <template>
-<AppLayout>
-  <h1 class="text-4xl font-bold">
-    Users
-  </h1>
+<h1 class="text-4xl font-bold">
+  Users
+</h1>
 
-  <div class="mt-[800px]">
-    <p>The current time is {{ props.time }}</p>
+<div class="mt-[800px]">
+  <p>The current time is {{ props.time }}</p>
 
-    <Link
-      href="/users" class="text-blue-500 hover:underline"
-      preserve-scroll
-    >
-      Refresh
-    </Link>
-  </div>
-</AppLayout>
+  <Link
+    href="/users" class="text-blue-500 hover:underline"
+    preserve-scroll
+  >
+    Refresh
+  </Link>
+</div>
 </template>

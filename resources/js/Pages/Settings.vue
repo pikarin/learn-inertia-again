@@ -1,11 +1,13 @@
-<script setup>
+<script>
 import AppLayout from '../Shared/AppLayout.vue'
+
+export default {
+  layout: AppLayout,
+}
 </script>
 
 <template>
-<AppLayout>
-  <h1 class="text-4xl font-bold">
-    Settings
-  </h1>
-</AppLayout>
+<h1 class="text-4xl font-bold">
+  Settings
+</h1>
 </template>
