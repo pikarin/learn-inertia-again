@@ -4,8 +4,8 @@ import { InertiaProgress } from '@inertiajs/progress'
 import AppLayout from './Shared/AppLayout.vue'
 
 createInertiaApp({
-  resolve: name =>{
-    const page = require(`./Pages/${name}`).default
+  resolve: async name => {
+    const page = (await import(`./Pages/${name}`)).default
     page.layout ??= AppLayout
     return page
   },
