@@ -1,19 +1,43 @@
 <script setup>
+import { Inertia } from '@inertiajs/inertia'
 import { Link } from '@inertiajs/inertia-vue3'
+import { ref, watch } from 'vue';
 import AppPagination from '../Shared/AppPagination.vue';
-defineProps({
+
+const props = defineProps({
   users: {
     type: Object,
     default: () => ({}),
-  } })
+  },
+  filters: {
+    type: Object,
+    default: () => ({}),
+  },
+})
+
+const search = ref(props.filters.search)
+
+watch(search, value => {
+  Inertia.get('/users', { search: value }, {
+    preserveState: true,
+    replace: true,
+  })
+});
 </script>
 
 <template>
 <Head title="Users" />
 
-<h1 class="text-4xl font-bold">
-  Users
-</h1>
+<div class="flex justify-between">
+  <h1 class="text-4xl font-bold">
+    Users
+  </h1>
+
+  <input
+    v-model="search" type="text"
+    placeholder="Search..." class="border px-2 rounded-lg"
+  >
+</div>
 
 <div class="mt-10 flex flex-col">
   <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
