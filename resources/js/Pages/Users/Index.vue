@@ -2,7 +2,7 @@
 import { Inertia } from '@inertiajs/inertia'
 import { Link } from '@inertiajs/inertia-vue3'
 import { ref, watch } from 'vue';
-import AppPagination from '../Shared/AppPagination.vue';
+import AppPagination from '../../Shared/AppPagination.vue';
 
 const props = defineProps({
   users: {
