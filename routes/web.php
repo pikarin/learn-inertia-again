@@ -31,12 +31,15 @@ Route::middleware('auth')->group(function () {
             ]),
 
             'filters' => Request::only(['search']),
+            'can' => [
+                'createUsers' => Auth::user()->can('create', User::class),
+            ]
         ]);
     });
 
     Route::get('/users/create', function () {
         return Inertia::render('Users/Create');
-    });
+    })->can('create', User::class);
 
     Route::post('/users', function () {
         $attributes = Request::validate([

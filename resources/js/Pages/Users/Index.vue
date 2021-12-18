@@ -14,6 +14,10 @@ const props = defineProps({
     type: Object,
     default: () => ({}),
   },
+  can: {
+    type: Object,
+    default: () => ({}),
+  }
 })
 
 const search = ref(props.filters.search)
@@ -35,7 +39,7 @@ watch(search, debounce(function (value) {
       Users
     </h1>
 
-    <Link href="/users/create" class="ml-2 text-blue-500 text-sm">
+    <Link v-if="can.createUsers" href="/users/create" class="ml-2 text-blue-500 text-sm">
       New User
     </Link>
   </div>
