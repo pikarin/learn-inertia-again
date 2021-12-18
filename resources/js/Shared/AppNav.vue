@@ -11,7 +11,7 @@ import AppNavLink from './AppNavLink.vue'
       </AppNavLink>
     </li>
     <li>
-      <AppNavLink href="/users" :active="$page.component === 'Users'">
+      <AppNavLink href="/users" :active="$page.component.startsWith('Users')">
         Users
       </AppNavLink>
     </li>
