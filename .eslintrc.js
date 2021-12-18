@@ -13,7 +13,7 @@ module.exports = {
     indent: ['error', 2],
     'linebreak-style': ['error', 'unix'],
     quotes: ['error', 'single'],
-    semi: 'off',
+    semi: ['error', 'never'],
 
     'vue/order-in-components': ['error'],
     'vue/require-default-prop': ['error'],
@@ -21,7 +21,7 @@ module.exports = {
     'vue/max-attributes-per-line': [
       'error',
       {
-        singleline: 2,
+        singleline: 3,
         multiline: 2,
       },
     ],

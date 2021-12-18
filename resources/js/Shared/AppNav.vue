@@ -1,5 +1,5 @@
 <script setup>
-import AppNavLink from './AppNavLink.vue';
+import AppNavLink from './AppNavLink.vue'
 </script>
 
 <template>

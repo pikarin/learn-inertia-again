@@ -1,8 +1,8 @@
 <script setup>
 import { Inertia } from '@inertiajs/inertia'
 import { Link } from '@inertiajs/inertia-vue3'
-import { ref, watch } from 'vue';
-import AppPagination from '../../Shared/AppPagination.vue';
+import { ref, watch } from 'vue'
+import AppPagination from '../../Shared/AppPagination.vue'
 
 const props = defineProps({
   users: {
@@ -22,16 +22,22 @@ watch(search, value => {
     preserveState: true,
     replace: true,
   })
-});
+})
 </script>
 
 <template>
 <Head title="Users" />
 
 <div class="flex justify-between">
-  <h1 class="text-4xl font-bold">
-    Users
-  </h1>
+  <div class="flex items-center">
+    <h1 class="text-4xl font-bold">
+      Users
+    </h1>
+
+    <Link href="/users/create" class="ml-2 text-blue-500 text-sm">
+      New User
+    </Link>
+  </div>
 
   <input
     v-model="search" type="text"

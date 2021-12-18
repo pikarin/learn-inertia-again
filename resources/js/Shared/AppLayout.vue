@@ -1,18 +1,15 @@
 <script setup>
-import { usePage } from '@inertiajs/inertia-vue3';
-import { computed } from 'vue';
-import AppNav from './AppNav.vue';
+import { usePage } from '@inertiajs/inertia-vue3'
+import { computed } from 'vue'
+import AppNav from './AppNav.vue'
 
-const username = computed(() => usePage().props.value.auth.user.username);
+const username = computed(() => usePage().props.value.auth.user.username)
 
 </script>
 
 <template>
 <Head>
-  <meta
-    head-key="description" name="description"
-    content="My App description"
-  >
+  <meta head-key="description" name="description" content="My App description">
 </Head>
 
 <section class="p-6 bg-gray-200">

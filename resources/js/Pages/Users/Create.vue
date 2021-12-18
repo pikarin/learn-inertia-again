@@ -1,6 +1,13 @@
 <script setup>
-import { Inertia } from '@inertiajs/inertia';
+import { Inertia } from '@inertiajs/inertia'
 import { reactive } from 'vue'
+
+defineProps({
+  errors: {
+    type: Object,
+    default: () => ({}),
+  },
+})
 
 const form = reactive({
   name: '',
@@ -20,19 +27,20 @@ const submit = () => {
   Create New User
 </h1>
 
-<form
-  class="max-w-md mx-auto mt-8"
-  @submit.prevent="submit"
->
+<form class="max-w-md mx-auto mt-8" @submit.prevent="submit">
   <div class="mb-6">
     <label for="name" class="block mb-2 uppercase font-bold text-xs text-gray-700">Name</label>
 
     <input
-      id="name" v-model="form.name"
+      id="name"
+      v-model="form.name"
       type="text"
-      name="name" required
+      name="name"
       class="border border-gray-400 p-2 w-full"
+      required
     >
+
+    <p v-if="errors.name" class="text-red-500 text-xs mt-1" v-text="errors.name" />
   </div>
 
   <div class="mb-6">
@@ -40,10 +48,14 @@ const submit = () => {
 
     <input
       id="email"
-      v-model="form.email" type="email"
-      name="email" required
+      v-model="form.email"
+      type="email"
+      name="email"
       class="border border-gray-400 p-2 w-full"
+      required
     >
+
+    <p v-if="errors.email" class="text-red-500 text-xs mt-1" v-text="errors.email" />
   </div>
 
   <div class="mb-6">
@@ -51,10 +63,14 @@ const submit = () => {
 
     <input
       id="password"
-      v-model="form.password" type="password"
-      name="password" required
+      v-model="form.password"
+      type="password"
+      name="password"
       class="border border-gray-400 p-2 w-full"
+      required
     >
+
+    <p v-if="errors.password" class="text-red-500 text-xs mt-1" v-text="errors.password" />
   </div>
 
   <div class="mb-6">
