@@ -6,7 +6,11 @@ import AppLayout from './Shared/AppLayout.vue'
 createInertiaApp({
   resolve: async name => {
     const page = (await import(`./Pages/${name}`)).default
-    page.layout ??= AppLayout
+
+    if (page.layout === undefined) {
+      page.layout = AppLayout
+    }
+
     return page
   },
 

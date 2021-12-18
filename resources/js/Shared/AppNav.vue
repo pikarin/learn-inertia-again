@@ -20,6 +20,11 @@ import AppNavLink from './AppNavLink.vue'
         Settings
       </AppNavLink>
     </li>
+    <li>
+      <AppNavLink href="/logout" method="POST">
+        Logout
+      </AppNavLink>
+    </li>
   </ul>
 </nav>
 </template>
