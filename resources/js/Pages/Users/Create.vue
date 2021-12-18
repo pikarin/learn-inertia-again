@@ -1,22 +1,14 @@
 <script setup>
-import { Inertia } from '@inertiajs/inertia'
-import { reactive } from 'vue'
+import { useForm } from '@inertiajs/inertia-vue3'
 
-defineProps({
-  errors: {
-    type: Object,
-    default: () => ({}),
-  },
-})
-
-const form = reactive({
+const form = useForm({
   name: '',
   email: '',
   password: '',
 })
 
 const submit = () => {
-  Inertia.post('/users', form)
+  form.post('/users')
 }
 </script>
 
@@ -37,10 +29,9 @@ const submit = () => {
       type="text"
       name="name"
       class="border border-gray-400 p-2 w-full"
-      required
     >
 
-    <p v-if="errors.name" class="text-red-500 text-xs mt-1" v-text="errors.name" />
+    <p v-if="form.errors.name" class="text-red-500 text-xs mt-1" v-text="form.errors.name" />
   </div>
 
   <div class="mb-6">
@@ -52,10 +43,9 @@ const submit = () => {
       type="email"
       name="email"
       class="border border-gray-400 p-2 w-full"
-      required
     >
 
-    <p v-if="errors.email" class="text-red-500 text-xs mt-1" v-text="errors.email" />
+    <p v-if="form.errors.email" class="text-red-500 text-xs mt-1" v-text="form.errors.email" />
   </div>
 
   <div class="mb-6">
@@ -67,14 +57,13 @@ const submit = () => {
       type="password"
       name="password"
       class="border border-gray-400 p-2 w-full"
-      required
     >
 
-    <p v-if="errors.password" class="text-red-500 text-xs mt-1" v-text="errors.password" />
+    <p v-if="form.errors.password" class="text-red-500 text-xs mt-1" v-text="form.errors.password" />
   </div>
 
   <div class="mb-6">
-    <button class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500">
+    <button class="bg-blue-400 text-white rounded py-2 px-4 hover:bg-blue-500 disabled:bg-blue-400/70" :disabled="form.processing">
       Submit
     </button>
   </div>
