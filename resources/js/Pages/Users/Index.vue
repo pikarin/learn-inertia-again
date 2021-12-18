@@ -3,6 +3,7 @@ import { Inertia } from '@inertiajs/inertia'
 import { Link } from '@inertiajs/inertia-vue3'
 import { ref, watch } from 'vue'
 import AppPagination from '../../Shared/AppPagination.vue'
+import debounce from 'lodash/debounce'
 
 const props = defineProps({
   users: {
@@ -17,12 +18,12 @@ const props = defineProps({
 
 const search = ref(props.filters.search)
 
-watch(search, value => {
+watch(search, debounce(function (value) {
   Inertia.get('/users', { search: value }, {
     preserveState: true,
     replace: true,
   })
-})
+}, 300))
 </script>
 
 <template>

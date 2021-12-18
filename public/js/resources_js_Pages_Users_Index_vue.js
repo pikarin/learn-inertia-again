@@ -15,6 +15,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _Shared_AppPagination_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Shared/AppPagination.vue */ "./resources/js/Shared/AppPagination.vue");
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash/debounce */ "./node_modules/lodash/debounce.js");
+/* harmony import */ var lodash_debounce__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash_debounce__WEBPACK_IMPORTED_MODULE_4__);
+
 
 
 
@@ -39,14 +42,14 @@ __webpack_require__.r(__webpack_exports__);
     expose();
     var props = __props;
     var search = (0,vue__WEBPACK_IMPORTED_MODULE_2__.ref)(props.filters.search);
-    (0,vue__WEBPACK_IMPORTED_MODULE_2__.watch)(search, function (value) {
+    (0,vue__WEBPACK_IMPORTED_MODULE_2__.watch)(search, lodash_debounce__WEBPACK_IMPORTED_MODULE_4___default()(function (value) {
       _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_0__.Inertia.get('/users', {
         search: value
       }, {
         preserveState: true,
         replace: true
       });
-    });
+    }, 300));
     var __returned__ = {
       props: props,
       search: search,
@@ -54,7 +57,8 @@ __webpack_require__.r(__webpack_exports__);
       Link: _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_1__.Link,
       ref: vue__WEBPACK_IMPORTED_MODULE_2__.ref,
       watch: vue__WEBPACK_IMPORTED_MODULE_2__.watch,
-      AppPagination: _Shared_AppPagination_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+      AppPagination: _Shared_AppPagination_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+      debounce: (lodash_debounce__WEBPACK_IMPORTED_MODULE_4___default())
     };
     Object.defineProperty(__returned__, '__isScriptSetup', {
       enumerable: false,
