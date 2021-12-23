@@ -21,7 +21,7 @@ import AppNavLink from './AppNavLink.vue'
       </AppNavLink>
     </li>
     <li>
-      <AppNavLink href="/logout" method="POST">
+      <AppNavLink href="/logout" method="POST" as="button">
         Logout
       </AppNavLink>
     </li>

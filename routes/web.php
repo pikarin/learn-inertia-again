@@ -5,6 +5,7 @@ use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Request;
 use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Validation\Rule;
 
 Route::get('login', [LoginController::class, 'create'])->name('login');
 Route::post('login', [LoginController::class, 'store']);
@@ -49,6 +50,38 @@ Route::middleware('auth')->group(function () {
         ]);
 
         User::create($attributes);
+
+        return redirect('/users');
+    });
+
+    Route::get('/users/{id}/edit', function ($id) {
+        $user = User::findOrFail($id);
+
+        return Inertia::render('Users/Edit', [
+            'user' => [
+                'id' => $user->id,
+                'name' => $user->name,
+                'email' => $user->email,
+            ],
+        ]);
+    })->can('update', User::class);
+
+    Route::put('/users/{id}', function ($id) {
+        $user = User::findOrFail($id);
+
+        $validated = Request::validate([
+            'name' => 'required',
+            'email' => [
+                'required',
+                'email',
+                Rule::unique('users')->ignore($user->id),
+            ],
+            'password' => 'nullable',
+        ]);
+
+        $attributes = collect($validated)->filter()->toArray();
+
+        $user->update($attributes);
 
         return redirect('/users');
     });

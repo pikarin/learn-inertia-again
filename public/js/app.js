@@ -238,7 +238,8 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   /* PROPS */
   , ["active"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)($setup["AppNavLink"], {
     href: "/logout",
-    method: "POST"
+    method: "POST",
+    as: "button"
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_5];
@@ -389,13 +390,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _AppLayout_vue_vue_type_template_id_c876a902__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppLayout.vue?vue&type=template&id=c876a902 */ "./resources/js/Shared/AppLayout.vue?vue&type=template&id=c876a902");
 /* harmony import */ var _AppLayout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppLayout.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/AppLayout.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_laragon_www_inertia_learn_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _Users_aditia_code_learn_inertia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_inertia_learn_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AppLayout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AppLayout_vue_vue_type_template_id_c876a902__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/AppLayout.vue"]])
+const __exports__ = /*#__PURE__*/(0,_Users_aditia_code_learn_inertia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AppLayout_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AppLayout_vue_vue_type_template_id_c876a902__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/AppLayout.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -417,13 +418,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _AppNav_vue_vue_type_template_id_0230b09e__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppNav.vue?vue&type=template&id=0230b09e */ "./resources/js/Shared/AppNav.vue?vue&type=template&id=0230b09e");
 /* harmony import */ var _AppNav_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppNav.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/AppNav.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_laragon_www_inertia_learn_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _Users_aditia_code_learn_inertia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_inertia_learn_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AppNav_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AppNav_vue_vue_type_template_id_0230b09e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/AppNav.vue"]])
+const __exports__ = /*#__PURE__*/(0,_Users_aditia_code_learn_inertia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AppNav_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AppNav_vue_vue_type_template_id_0230b09e__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/AppNav.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -445,13 +446,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _AppNavLink_vue_vue_type_template_id_d7927690__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppNavLink.vue?vue&type=template&id=d7927690 */ "./resources/js/Shared/AppNavLink.vue?vue&type=template&id=d7927690");
 /* harmony import */ var _AppNavLink_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./AppNavLink.vue?vue&type=script&setup=true&lang=js */ "./resources/js/Shared/AppNavLink.vue?vue&type=script&setup=true&lang=js");
-/* harmony import */ var C_laragon_www_inertia_learn_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
+/* harmony import */ var _Users_aditia_code_learn_inertia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/vue-loader/dist/exportHelper.js */ "./node_modules/vue-loader/dist/exportHelper.js");
 
 
 
 
 ;
-const __exports__ = /*#__PURE__*/(0,C_laragon_www_inertia_learn_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AppNavLink_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AppNavLink_vue_vue_type_template_id_d7927690__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/AppNavLink.vue"]])
+const __exports__ = /*#__PURE__*/(0,_Users_aditia_code_learn_inertia_node_modules_vue_loader_dist_exportHelper_js__WEBPACK_IMPORTED_MODULE_2__["default"])(_AppNavLink_vue_vue_type_script_setup_true_lang_js__WEBPACK_IMPORTED_MODULE_1__["default"], [['render',_AppNavLink_vue_vue_type_template_id_d7927690__WEBPACK_IMPORTED_MODULE_0__.render],['__file',"resources/js/Shared/AppNavLink.vue"]])
 /* hot reload */
 if (false) {}
 
@@ -594,6 +595,14 @@ var map = {
 	"./Users/Create.vue": [
 		"./resources/js/Pages/Users/Create.vue",
 		"resources_js_Pages_Users_Create_vue"
+	],
+	"./Users/Edit": [
+		"./resources/js/Pages/Users/Edit.vue",
+		"resources_js_Pages_Users_Edit_vue"
+	],
+	"./Users/Edit.vue": [
+		"./resources/js/Pages/Users/Edit.vue",
+		"resources_js_Pages_Users_Edit_vue"
 	],
 	"./Users/Index": [
 		"./resources/js/Pages/Users/Index.vue",
